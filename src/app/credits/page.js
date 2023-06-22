@@ -80,14 +80,14 @@ export default function Credits() {
 
   return (
     <main>
-      <Header />
-      <div className="flex flex-col content-center text-white bg-slate-950 w-full pt-6 pb-12 min-h-[calc(100vh-160.3px)]">
+      <div className="flex flex-col overflow-x-hidden items-center content-center text-white bg-slate-950 w-full pb-24 min-h-[calc(100vh-160.3px)]">
+        <Header />
         <div>
-          <Image src={BgGradient} className="absolute float-right right-0 mix-blend-hard-light w-3/6 -mt-8 select-none" draggable="false" />
+          <Image src={BgGradient} className="absolute float-right right-0 mix-blend-hard-light w-[900px] top-0 select-none" draggable="false" />
         </div>
-        <p className={`${font.Clash_display_h1bold} mx-auto mt-20 mb-16 pb-4 select-none`} draggable="false">Introducing our savvy mastermind</p>
+        <p className={`${font.Clash_display_h1bold} flex mx-auto mt-20 mb-16 pb-4 text-center select-none`} draggable="false">Introducing our savvy mastermind</p>
         {dataDev.map((row, index) => (
-          <div key={"row" + index} className="mx-auto flex gap-6 mb-12 select-none" draggable="false">
+          <div key={"row" + index} className="mx-auto flex flex-col sm:flex-row flex-wrap justify-center px-2 gap-6 mb-12 select-none" draggable="false">
           {row.map((items, index) => (
             <div key={"card" + index} className="group">
               <div className="relative w-48 rounded-[0.65rem] overflow-hidden text-white">
@@ -104,7 +104,6 @@ export default function Credits() {
           ))}
           </div>
         ))}
-        <br />    
       </div>
       <Footer />
     </main>
